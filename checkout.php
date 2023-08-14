@@ -36,13 +36,13 @@ if(isset($_POST['order_btn'])){
    $order_query = mysqli_query($conn, "SELECT * FROM `orders` WHERE name = '$name' AND number = '$number' AND email = '$email' AND method = '$method' AND address = '$address' AND total_products = '$total_products' AND total_price = '$cart_total'") or die('query failed');
 
    if($cart_total == 0){
-      $message[] = 'your cart is empty';
+      $message[] = 'Your Cart is Empty';
    }else{
       if(mysqli_num_rows($order_query) > 0){
-         $message[] = 'order already placed!'; 
+         $message[] = 'Order Has Already Been Placed'; 
       }else{
          mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES('$user_id', '$name', '$number', '$email', '$method', '$address', '$total_products', '$cart_total', '$placed_on')") or die('query failed');
-         $message[] = 'order placed successfully!';
+         $message[] = 'Order Has Been Placed Successfully!';
          mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
       }
    }
@@ -122,31 +122,31 @@ if(isset($_POST['order_btn'])){
             </select>
          </div>
          <div class="inputBox">
-            <span>address line 01 :</span>
-            <input type="number" min="0" name="flat" required placeholder="e.g. flat no.">
+            <span>Address Line:</span>
+            <input type="number" min="0" name="flat" required placeholder="Eg. House No. 1">
          </div>
          <div class="inputBox">
-            <span>address line 01 :</span>
-            <input type="text" name="street" required placeholder="e.g. ">
+            <span>Address Line Name :</span>
+            <input type="text" name="street" required placeholder="Eg. Buddhanilkantha-01">
          </div>
          <div class="inputBox">
-            <span>city :</span>
-            <input type="text" name="city" required placeholder="e.g.">
+            <span>City: </span>
+            <input type="text" name="city" required placeholder="Eg. Kathmandu">
          </div>
          <div class="inputBox">
-            <span>state :</span>
-            <input type="text" name="state" required placeholder="e.g. ">
+            <span>State :</span>
+            <input type="text" name="state" required placeholder="Eg. Bagmati ">
          </div>
          <div class="inputBox">
-            <span>country :</span>
-            <input type="text" name="country" required placeholder="e.g.">
+            <span>Country :</span>
+            <input type="text" name="country" required placeholder="Eg. Nepal">
          </div>
          <div class="inputBox">
-            <span>pin code :</span>
-            <input type="number" min="0" name="pin_code" required placeholder="e.g. ">
+            <span>Pin Code :</span>
+            <input type="number" min="0" name="pin_code" required placeholder="Eg. 44600 ">
          </div>
       </div>
-      <input type="submit" value="order now" class="btn" name="order_btn">
+      <input type="submit" value="order now!" class="btn" name="order_btn">
    </form>
 
 </section>
