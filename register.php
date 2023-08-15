@@ -68,7 +68,7 @@ if(isset($message)){
       <input type="email" name="email" placeholder="Enter Your Email" required class="box">
       <input type="password" name="password" id="password" placeholder="Enter Your Password" required class="box">
       <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Your Password" required class="box">
-      <p id="message">Password is <span id="strength"></span></p>
+      <p id="message">Password is <span id="strength"></span><br><span id="match"></span></p>
 
       <select name="user_type" class="box">
          <option value="user">User</option>
@@ -85,6 +85,7 @@ if(isset($message)){
    var cpass = document.getElementById("cpassword");
    var msg = document.getElementById("message");
    var str = document.getElementById("strength");
+   var mat = document.getElementById("match");
 
    pass.addEventListener('input', () => {
       if(pass.value.length > 0){
@@ -94,21 +95,32 @@ if(isset($message)){
          msg.style.display = "none";
       }
       if(pass.value.length < 4){
-         str.innerHTML = "Weak";
+         str.innerHTML = "Weak!";
          pass.style.borderColor = "#ff5925";
 
       }
       else if(pass.value.length >= 4 && pass.value.length < 8){
-         str.innerHTML = "Medium";
+         str.innerHTML = "Medium!";
          pass.style.borderColor = "yellow";
 
       }
       else if(pass.value.length >= 8){
-         str.innerHTML = "Strong";
+         str.innerHTML = "Strong!";
          pass.style.borderColor = "#26d730";
       }
-
    })
+
+   cpass.addEventListener('input', () =>{
+      if(cpass.value == pass.value){
+         cpass.style.borderColor = "#26d730";
+         mat.innerHTML = "Password & Confirm Password Match!";
+      }
+      else if(cpass.value != pass.value){
+         cpass.style.borderColor = "#ff5925";
+         mat.innerHTML = "Password & Confirm Password Does Not Match!";
+      }
+   })
+
 </script>
 </body>
 </html>
