@@ -20,23 +20,24 @@
    text-decoration: none;
    transition:all .2s linear;
 }
-
+/*Text Selection CSS Selector*/
 *::selection{
    background-color: var(--purple);
    color:var(--white);
 }
 
+/*Scroll bar Styling For Admin Panels*/
 *::-webkit-scrollbar{
    height: .5rem;
    width: 1rem;
 }
 
 *::-webkit-scrollbar-track{
-   background-color: transparent;
+   background-color: var(--white);
 }
 
 *::-webkit-scrollbar-thumb{
-   background-color: var(--purple);
+   background-color: var(--orange);
 }
 
 html{
@@ -69,6 +70,7 @@ section{
    font-size: 2rem;
 }
 
+/*Message Styling For Admin Panels*/
 .message{
    position: sticky;
    top:0;
@@ -98,6 +100,7 @@ section{
    transform: rotate(90deg);
 }
 
+/*Button Styling For Admin Panels*/
 .btn,
 .option-btn,
 .delete-btn,
@@ -106,18 +109,17 @@ section{
    margin-top: 1rem;
    padding:1rem 3rem;
    cursor: pointer;
-   color:var(--orange);
+   color:var(--white);
    font-size: 1.8rem;
    border-radius: .5rem;
    text-transform: capitalize;
 }
-
 .btn:hover,
 .option-btn:hover,
 .delete-btn:hover{
    background-color: var(--black);
+   color: #fff;
 }
-
 .white-btn,
 .btn{
    background-color: var(--orange);
@@ -136,6 +138,7 @@ section{
    color:var(--black);
 }
 
+/*FadeIn Keyframes Styling For Admin Panels*/
 @keyframes fadeIn {
    0%{
       transform: translateY(1rem);
@@ -143,6 +146,7 @@ section{
    }
 }
 
+/*Admin Header Styling For Admin Panel*/
 .header{
    position: sticky;
    top:0; left:0; right:0;
@@ -178,6 +182,7 @@ section{
 
 .header .flex .navbar a:hover{
    color:var(--purple);
+   text-decoration: underline;
 }
 
 .header .flex .icons div{
@@ -217,7 +222,7 @@ section{
 }
 
 .header .flex .account-box p span{
-   color:var(--purple);
+   color:var(--black);
 }
 
 .header .flex .account-box .delete-btn{
@@ -231,17 +236,19 @@ section{
 }
 
 .header .flex .account-box div a{
-   color:var(--orange);
+   color:var(--black);
 }
 
 .header .flex .account-box div a:hover{
    text-decoration: underline;
+   color: var(--orange);
 }
 
 #menu-btn{
    display: none;
 }
 
+/*Dashboard Styling For Admin Panels*/
 .dashboard .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -275,6 +282,7 @@ section{
    border:var(--border);
 }
 
+/*Add Product Section Styling For Admin Panels*/
 .add-products form{
    background-color: var(--white);
    border-radius: .5rem;
@@ -304,6 +312,7 @@ section{
    border:var(--border);
 }
 
+/*Show Product Section Styling For Admin Panels*/
 .show-products .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, 30rem);
@@ -343,6 +352,7 @@ section{
    color:var(--red);
 }
 
+/*Edit Product Section Styling For Admin Panels*/
 .edit-product-form{
    min-height: 100vh;
    background-color: rgba(0,0,0,.7);
@@ -382,6 +392,7 @@ section{
    width: 100%;
 }
 
+/*Order Product Section Styling For Admin Panels*/
 .orders .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, 30rem);
@@ -425,6 +436,7 @@ section{
    color:var(--black);
 }
 
+/*users Section Styling For Admin Panels*/
 .users .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, 30rem);
@@ -458,6 +470,7 @@ section{
    margin-top: 0;
 }
 
+/*Messages Sent Via Contact Section Styling For Admin Panels*/
 .messages .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, 35rem);

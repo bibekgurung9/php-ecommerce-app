@@ -103,7 +103,7 @@ if(isset($_POST['update_product'])){
    <h1 class="title">shop products</h1>
 
    <form action="" method="post" enctype="multipart/form-data">
-      <h3>add product</h3>
+      <h3>Add Product</h3>
       <input type="text" name="name" class="box" placeholder="Enter Product Name" required>
       <input type="number" min="0" name="price" class="box" placeholder="Enter Product Price" required>
       <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
@@ -135,7 +135,7 @@ if(isset($_POST['update_product'])){
       <?php
          }
       }else{
-         echo '<p class="empty">no products added yet!</p>';
+         echo '<p class="empty">No Products Have Been Added Yet!</p>';
       }
       ?>
    </div>

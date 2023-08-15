@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
-   /*--purple:#8e44ad;*/
    --red:#c0392b;
    --orange:#f39c12;
    --black:#333;
@@ -23,7 +22,7 @@
 }
 
 *::selection{
-   background-color: var(--purple);
+   background-color: var(--orange);
    color:var(--white);
 }
 
@@ -37,7 +36,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-   background-color: var(--purple);
+   background-color: var(--orange);
 }
 
 html{
@@ -50,7 +49,6 @@ section{
  
 }
 
-
 .empty{
    padding:1.5rem;
    text-align: center;
@@ -59,7 +57,7 @@ section{
    color:var(--red);
    font-size: 2rem;
 }
-
+/*Message Styling*/
 .message{
    position: sticky;
    top:0;
@@ -88,7 +86,7 @@ section{
 .message i:hover{
    transform: rotate(90deg);
 }
-
+/*Title Styling*/
 .title{
    text-align: center;
    margin-bottom: 2rem;
@@ -96,7 +94,7 @@ section{
    color:var(--black);
    font-size: 4rem;
 }
-
+/*Button Styling*/
 .btn,
 .option-btn,
 .delete-btn,
@@ -135,6 +133,7 @@ section{
    color:var(--black);
 }
 
+/*Heading Styling*/
 .heading{
    min-height: 30vh;
    display: flex;
@@ -147,33 +146,30 @@ section{
    background-position: center;
    text-align: center;
 }
-
 .heading h3{
    font-size: 5rem;
    color:var(--black);
    text-transform: uppercase;
 }
-
 .heading p{
    font-size: 2.5rem;
    color:var(--light-color);
 }
-
 .heading p a{
-   color:var(--purple);
+   color:var(--orange);
 }
-
 .heading p a:hover{
    text-decoration: underline;
 }
 
+/*Keyframes Styling*/
 @keyframes fadeIn {
    0%{
       transform: translateY(1rem);
       opacity: .2s;
    }
 }
-
+/*Form Styling*/
 .form-container{
    min-height: 100vh;
    background-color: var(--light-bg);
@@ -201,7 +197,6 @@ section{
 }
 
 .form-container form #message{
-
  bottom: -30px;
  color: #000;
  font-size: 15px;
@@ -227,11 +222,13 @@ section{
 }
 
 .form-container form p a{
-   color:var(--purple);
+   transition: 0.3s;
 }
 
 .form-container form p a:hover{
    text-decoration: underline;
+   color: #f39c12;
+
 }
 
 .header .header-1{
@@ -275,7 +272,7 @@ section{
 }
 
 .header .header-1 .flex .share a:hover{
-   color:var(--purple);
+   color:var(--orange);
 }
 
 .header .header-1 .flex p{
@@ -284,16 +281,17 @@ section{
 }
 
 .header .header-1 .flex p a{
-   color:var(--purple);
+   color:var(--black);
 }
 
 .header .header-1 .flex p a:hover{
    text-decoration: underline;
+   color: var(--orange);
 }
 
 .header .header-2 .flex .logo{
    font-size: 2.5rem;
-   color:var(--purple);
+   color:var(--black);
 }
 
 .header .header-2 .flex .navbar a{
@@ -303,7 +301,7 @@ section{
 }
 
 .header .header-2 .flex .navbar a:hover{
-   color:var(--purple);
+   color:var(--orange);
    text-decoration: underline;
 }
 
@@ -315,7 +313,7 @@ section{
 }
 
 .header .header-2 .flex .icons > *:hover{
-   color:var(--purple);
+   color:var(--orange);
 }
 
 #menu-btn{
@@ -347,7 +345,7 @@ section{
 }
 
 .header .header-2 .flex .user-box p span{
-   color:var(--purple);
+   color:var(--black);
 }
 
 .header .header-2 .flex .user-box .delete-btn{
@@ -743,6 +741,7 @@ section{
    user-select: none;
 }
 
+/*Display Order Section Styling*/
 .display-order{
    max-width: 1200px;
    margin: 0 auto;
@@ -774,6 +773,7 @@ section{
    color:var(--red);
 }
 
+/*Checkout Section Styling*/
 .checkout form{
    max-width: 1200px;
    padding:2rem;
@@ -847,7 +847,7 @@ section{
 }
 
 .placed-orders .box-container .box p span{
-   color:var(--purple);
+   color:var(--orange);
 }
 
 .search-form form{
@@ -871,14 +871,7 @@ section{
    border-radius: .5rem;
 }
 
-
-
-
-
-
-
-
- 
+/*Footer Section Styling*/
 
 .footer{
    background-color: var(--light-bg);
@@ -909,12 +902,12 @@ section{
 
 .footer .box-container .box p i,
 .footer .box-container .box a i{
-   color:var(--purple);
+   color:var(--orange);
    padding-right: .5rem;
 }
 
 .footer .box-container .box a:hover{
-   color:var(--purple);
+   color:var(--orange);
    text-decoration: underline;
 }
 
@@ -928,10 +921,8 @@ section{
 }
 
 .footer .credit span{
-   color:var(--purple);
+   color:var(--orange);
 }
-
-
 
 
 /* media queries  */
