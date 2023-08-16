@@ -17,8 +17,8 @@ if(isset($message)){
       <div class="flex">
          <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-github"></a>
-            <a href="#" class="fab fa-linkedin"></a>
+            <a href="https://github.com/bibekgurung9" target="_blank" class="fab fa-github"></a>
+            <a href="https://www.linkedin.com/in/bibek-gurung-4aa280274/" target="_blank" class="fab fa-linkedin"></a>
             <a href="#" class="fab fa-instagram"></a>
             
          </div>

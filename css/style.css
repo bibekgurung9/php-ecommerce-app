@@ -141,22 +141,22 @@ section{
    align-items: center;
    justify-content: center;
    gap:1rem;
-   background: url() no-repeat;
+   background: url(https://nepaldrives.com/wp-content/uploads/2022/11/Royal-Enfield-Super-Meteor-650-Cruiser-Revealed-Photo1.jpg) no-repeat;
    background-size: cover;
    background-position: center;
    text-align: center;
 }
 .heading h3{
    font-size: 5rem;
-   color:var(--black);
+   color:var(--white);
    text-transform: uppercase;
 }
 .heading p{
    font-size: 2.5rem;
-   color:var(--light-color);
+   color:var(--white);
 }
 .heading p a{
-   color:var(--orange);
+   color:var(--white);
 }
 .heading p a:hover{
    text-decoration: underline;
@@ -223,6 +223,7 @@ section{
 
 .form-container form p a{
    transition: 0.3s;
+   color: var(--black);
 }
 
 .form-container form p a:hover{
@@ -354,7 +355,7 @@ section{
 
 .home{
    min-height: 70vh;
-   background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url() no-repeat;
+   background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(https://wallpapercave.com/wp/wp3063448.jpg) no-repeat;
    background-size: cover;
    background-position: center;
    display: flex;
