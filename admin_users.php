@@ -13,7 +13,7 @@ if(!isset($admin_id)){
 
 if(isset($_GET['delete'])){
    $delete_id = $_GET['delete'];
-   mysqli_query($conn, "DELETE FROM `users` WHERE id = '$delete_id'") or die('query failed');
+   mysqli_query($conn, "DELETE FROM `users` WHERE id = '$delete_id'") or die('Query Failed');
    header('location:admin_users.php');
 }
 
@@ -40,7 +40,7 @@ if(isset($_GET['delete'])){
 
    <div class="box-container">
       <?php
-         $select_users = mysqli_query($conn, "SELECT * FROM `users`") or die('query failed');
+         $select_users = mysqli_query($conn, "SELECT * FROM `users`") or die('Query Failed');
          while($fetch_users = mysqli_fetch_assoc($select_users)){
       ?>
       <div class="box">
@@ -48,7 +48,7 @@ if(isset($_GET['delete'])){
          <p> Username : <span><?php echo $fetch_users['name']; ?></span> </p>
          <p> Email : <span><?php echo $fetch_users['email']; ?></span> </p>
          <p> User Type : <span style="color:<?php if($fetch_users['user_type'] == 'admin'){ echo 'var(--red)'; } ?>"><?php echo $fetch_users['user_type']; ?></span> </p>
-         <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('delete this user?');" class="delete-btn">delete user</a>
+         <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('Delete This User?');" class="delete-btn">Delete User</a>
       </div>
       <?php
          };

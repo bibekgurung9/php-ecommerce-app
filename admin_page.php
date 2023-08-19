@@ -113,6 +113,24 @@ if(!isset($admin_id)){
          <h3><?php echo $number_of_account; ?></h3>
          <p>Total Accounts</p>
       </div>
+
+      <div class="box">
+         <?php 
+            $select_message = mysqli_query($conn, "SELECT * FROM `message`") or die('query failed');
+            $number_of_message = mysqli_num_rows($select_message);
+         ?>
+         <h3><?php echo $number_of_message; ?></h3>
+         <p>Total Messages </p>
+      </div>
+
+      <div class="box">
+         <?php 
+            $select_testride = mysqli_query($conn, "SELECT * FROM `test-ride`") or die('query failed');
+            $number_of_testrides= mysqli_num_rows($select_testride);
+         ?>
+         <h3><?php echo $number_of_testrides; ?></h3>
+         <p>Booked Test Rides </p>
+      </div>
    </div>
 </section>
 

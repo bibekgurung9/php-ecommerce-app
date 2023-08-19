@@ -43,24 +43,24 @@ if(isset($_GET['delete'])){
 
    <div class="box-container">
    <?php
-      $select_message = mysqli_query($conn, "SELECT * FROM `test-ride`") or die('query failed');
+      $select_message = mysqli_query($conn, "SELECT * FROM `test-ride`") or die('Query Failed');
       if(mysqli_num_rows($select_message) > 0){
          while($fetch_message = mysqli_fetch_assoc($select_message)){
       
    ?>
    <div class="box">
-      <p> user id : <span><?php echo $fetch_message['user_id']; ?></span> </p>
-      <p> name : <span><?php echo $fetch_message['name']; ?></span> </p>
-      <p> number : <span><?php echo $fetch_message['number']; ?></span> </p>
-      <p> email : <span><?php echo $fetch_message['email']; ?></span> </p>
+      <p> User Id : <span><?php echo $fetch_message['user_id']; ?></span> </p>
+      <p> Name : <span><?php echo $fetch_message['name']; ?></span> </p>
+      <p> Number : <span><?php echo $fetch_message['number']; ?></span> </p>
+      <p> Email : <span><?php echo $fetch_message['email']; ?></span> </p>
       <p> Booked Ride : <span><?php echo $fetch_message['test']; ?></span> </p>
-      <p> message : <span><?php echo $fetch_message['message']; ?></span> </p>
-      <a href="admin_testride.php?delete=<?php echo $fetch_message['id']; ?>" onclick="return confirm('delete this message?');" class="delete-btn">Delete The Message!</a>
+      <p> Message : <span><?php echo $fetch_message['message']; ?></span> </p>
+      <a href="admin_testride.php?delete=<?php echo $fetch_message['id']; ?>" onclick="return confirm('Delete This Test Ride?');" class="delete-btn">Delete The Message!</a>
    </div>
    <?php
       };
    }else{
-      echo '<p class="empty">You Have No Messages!</p>';
+      echo '<p class="empty">You Have No Test Ride Messagess!</p>';
    }
    ?>
    </div>
