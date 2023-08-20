@@ -57,10 +57,9 @@ if(isset($_POST['add_to_cart'])){
 
 <section class="products">
 
-   <h1 class="title">New Arrivals!!!</h1>
+   <h1 class="title">Our Products!</h1>
 
    <div class="box-container">
-
       <?php  
          $select_products = mysqli_query($conn, "SELECT * FROM `products` LIMIT 6") or die('query failed');
          if(mysqli_num_rows($select_products) > 0){
@@ -69,11 +68,13 @@ if(isset($_POST['add_to_cart'])){
      <form action="" method="post" class="box">
       <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
       <div class="name"><?php echo $fetch_products['name']; ?></div>
+      <a href="product_quickview.php?pid=<?= $fetch_products['id']; ?>"  class="fas fa-eye"></a>
       <div class="price">Rs. <?php echo $fetch_products['price']; ?>/-</div>
       <input type="number" min="1" name="product_quantity" value="1" class="qty">
       <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
       <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
       <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
+      
       <input type="submit" value="add to cart" name="add_to_cart" class="btn">
      </form>
       <?php

@@ -14,6 +14,7 @@ if(isset($_POST['add_product'])){
 
    $name = mysqli_real_escape_string($conn, $_POST['name']);
    $price = $_POST['price'];
+   $description = mysqli_real_escape_string($conn, $_POST['description']);
    $image = $_FILES['image']['name'];
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
@@ -22,19 +23,19 @@ if(isset($_POST['add_product'])){
    $select_product_name = mysqli_query($conn, "SELECT name FROM `products` WHERE name = '$name'") or die('query failed');
 
    if(mysqli_num_rows($select_product_name) > 0){
-      $message[] = 'product name already added';
+      $message[] = 'Product Name Has Already Been Added';
    }else{
-      $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, image) VALUES('$name', '$price', '$image')") or die('query failed');
+      $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, description, image) VALUES('$name', '$price', '$description', '$image')") or die('query failed');
 
       if($add_product_query){
          if($image_size > 2000000){
-            $message[] = 'image size is too large';
+            $message[] = 'Image Size Is Too Large!';
          }else{
             move_uploaded_file($image_tmp_name, $image_folder);
-            $message[] = 'product added successfully!';
+            $message[] = 'Product Has Been Added Successfully!';
          }
       }else{
-         $message[] = 'product could not be added!';
+         $message[] = 'Product Could Not Be Added! Error!!!';
       }
    }
 }
@@ -52,9 +53,10 @@ if(isset($_POST['update_product'])){
 
    $update_p_id = $_POST['update_p_id'];
    $update_name = $_POST['update_name'];
+   $update_description = $POST['update_description'];
    $update_price = $_POST['update_price'];
 
-   mysqli_query($conn, "UPDATE `products` SET name = '$update_name', price = '$update_price' WHERE id = '$update_p_id'") or die('query failed');
+   mysqli_query($conn, "UPDATE `products` SET name = '$update_name', price = '$update_price', description = '$update_description' WHERE id = '$update_p_id'") or die('query failed');
 
    $update_image = $_FILES['update_image']['name'];
    $update_image_tmp_name = $_FILES['update_image']['tmp_name'];
@@ -106,6 +108,7 @@ if(isset($_POST['update_product'])){
       <h3>Add Product</h3>
       <input type="text" name="name" class="box" placeholder="Enter Product Name" required>
       <input type="number" min="0" name="price" class="box" placeholder="Enter Product Price" required>
+      <textarea name="description" class="box" placeholder="Enter Product Description" id="" cols="30" rows="10"></textarea>
       <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
       <input type="submit" value="add product" name="add_product" class="btn">
    </form>
@@ -128,6 +131,7 @@ if(isset($_POST['update_product'])){
       <div class="box">
          <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
          <div class="name"><?php echo $fetch_products['name']; ?></div>
+         <div class="name"><?php echo $fetch_products['description']; ?></div>
          <div class="price">Rs. <?php echo $fetch_products['price']; ?>/-</div>
          <a href="admin_products.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">update</a>
          <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
@@ -171,14 +175,7 @@ if(isset($_POST['update_product'])){
 
 </section>
 
-
-
-
-
-
-
 <!-- custom admin js file link  -->
 <script src="js/admin_script.js"></script>
-
 </body>
 </html>

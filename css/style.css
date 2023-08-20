@@ -430,6 +430,77 @@ section{
    background-color: var(--red);
 }
 
+/*Styling For Quick View For Single Product*/
+.products .box-container .box a{
+   position: absolute;
+   top:1rem; right:1rem;
+   border-radius: .5rem;
+   padding:1rem;
+   font-size: 2.5rem;
+   color:var(--black);
+   background-color: transparent;
+}
+
+.products .box-container .box a:hover{
+   position: absolute;
+   top:1rem; right:1rem;
+   border-radius: .5rem;
+   padding:1rem;
+   font-size: 2.5rem;
+   color:var(--white);
+   background-color: var(--red);
+   box-shadow: var(--box-shadow);
+}
+
+
+/*Quick View Products*/
+.quickview .box-container .box{
+   border-radius: 2rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   padding:2rem;
+   text-align: center;
+   border:var(--border);
+   position: relative;
+}
+.quickview .box-container .box .image{
+   height: 50rem;
+}
+.quickview .box-container .box .name{
+   padding:1rem 0;
+   font-size: 2rem;
+   color:var(--black);
+}
+.quickview .box-container .box .qty{
+   width: 10%;
+   padding:1.2rem 1.4rem;
+   border-radius: .5rem;
+   border:var(--border);
+   margin:1rem 0;
+   font-size: 2rem;
+}
+.quickview  .box-container .box .price{
+   position: absolute;
+   top:1rem; left:1rem;
+   border-radius: .5rem;
+   padding:1rem;
+   font-size: 2.5rem;
+   color:var(--white);
+   background-color: var(--red);
+}
+
+.quickview .box .description{
+   position: absolute;
+   top:1rem; right:5rem;
+   border-radius: .1rem;
+   padding:1rem;
+   font-size: 3.5rem;
+   color:var(--black);
+   background-color: var(--white);
+}
+
+/*Quick View Section Ends Here*/
+
 .about .flex{
    max-width: 1200px;
    margin:0 auto;
