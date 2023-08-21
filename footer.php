@@ -25,7 +25,7 @@
          <h3>contact info</h3>
          <p> <i class="fas fa-phone"></i> +977-98XXXXXXXX</p>
          <p> <i class="fas fa-phone"></i> +144-XXXXXX </p>
-         <p> <i class="fas fa-envelope"></i> iambibekgrg@gmail.com </p>
+         <p> <i class="fas fa-envelope"></i> bibekgurung@email.com </p>
          <p> <i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
       </div>
    </div>
