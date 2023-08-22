@@ -55,6 +55,7 @@ if(isset($_POST['add_to_cart'])){
 
 </section>
 
+<?php include 'our_features.php'; ?>
 <section class="products">
 
    <h1 class="title">Our Products!</h1>

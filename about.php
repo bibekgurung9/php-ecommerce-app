@@ -1,6 +1,5 @@
 <!-------------------------------About Us Page Section------------------------------->
 <?php
-
 include 'config.php';
 session_start();
 
@@ -9,7 +8,6 @@ $user_id = $_SESSION['user_id'];
 if(!isset($user_id)){
    header('location:login.php');
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -19,23 +17,20 @@ if(!isset($user_id)){
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>About Us | BikeShop</title>
-
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
    <!------------------------------- Custom css file link ----------------------------- -->
    <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
    
-<?php 
-include 'header.php'; 
-?>
+<?php include 'header.php'; ?>
 
 <div class="heading">
    <h3>about us</h3>
    <p> <a href="home.php">Home</a> | About </p>
 </div>
+
+<?php include 'our_features.php'; ?>
 
 <section class="about">
 
@@ -52,7 +47,6 @@ include 'header.php';
       </div>
 
    </div>
-
 </section>
 
 <section class="reviews">
@@ -62,8 +56,8 @@ include 'header.php';
    <div class="box-container">
 
       <div class="box">
-         <img src="images/user1.jpg" alt="">
-         <p>Best Bike Online Retailer I have ever used!</p>
+         <img src="images/user_reviews.png" alt="user review 1">
+         <p>5/5 The Best Ecommerce Website In Nepal. It features a clean UI and easy to use functions and features.</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -71,12 +65,12 @@ include 'header.php';
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
          </div>
-         <h3>Bibek Gurung</h3>
+         <h3>Customer #1</h3>
       </div>
 
       <div class="box">
-         <img src="images/pic-2.png" alt="">
-         <p>Thanks for the best deals in the market!</p>
+         <img src="images/user_reviews.png" alt="user review 2">
+         <p>They provide quality customer satisfaction with customer support who are 24/7 ready to help us! Awesome Site!</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -84,20 +78,20 @@ include 'header.php';
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
          </div>
-         <h3>Bibek Gurung #2</h3>
+         <h3>Customer #2</h3>
       </div>
 
       <div class="box">
-         <img src="images/pic-3.png" alt="">
-         <p>Best Ecommerce Site on the market!!!</p>
+         <img src="images/user_reviews.png" alt="user review 3">
+         <p>4/5 Stars but doesn't lag behind anyother platform in the current ecommerce sector in Nepal. You are doing a great job for us!</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
+            <i class=""></i>
          </div>
-         <h3>Bibek Gurung #3</h3>
+         <h3>Customer #3</h3>
       </div>
 
    </div>
