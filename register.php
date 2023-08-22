@@ -2,6 +2,13 @@
 
 include 'config.php';
 
+//Function to Validate Password with RegEx
+function validatePassword($password) {
+   // Regular expression pattern for password validation
+   $pattern = '/^(?=.*\d)(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/';
+   return preg_match($pattern, $password);
+}
+
 if(isset($_POST['submit'])){
 
    $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -10,15 +17,33 @@ if(isset($_POST['submit'])){
    $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
    $user_type = $_POST['user_type'];
 
-   $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
+   $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('Query Failed!');
 
    if(mysqli_num_rows($select_users) > 0){
       $message[] = 'User Already Exists!';
    }else{
       if($pass != $cpass){
          $message[] = 'Confirm Password Does Not Matched!';
-      }else{
-         mysqli_query($conn, "INSERT INTO `users`(name, email, password, user_type) VALUES('$name', '$email', '$cpass', '$user_type')") or die('query failed');
+      } else if(!validatePassword($_POST['password'])){
+         $requirements = array();
+
+         if(!preg_match('/.*\d.*/', $_POST['password'])){
+            $requirements[] = "at least one digit";
+         }
+         if (!preg_match('/.*[A-Z].*/', $_POST['password'])) {
+            $requirements[] = "at least one uppercase letter";
+        }
+        if (!preg_match('/.*[!@#$%^&*].*/', $_POST['password'])) {
+            $requirements[] = "at least one symbol";
+        }
+        if (strlen($_POST['password']) < 8) {
+            $requirements[] = "at least 8 characters";
+        }
+
+        $message[] = "Password Must Contain " .implode(', ', $requirements) . ".";
+      }
+      else{
+         mysqli_query($conn, "INSERT INTO `users`(name, email, password, user_type) VALUES('$name', '$email', '$cpass', '$user_type')") or die('Query Failed');
          $message[] = 'Registered Successfully!';
          header('location:login.php');
       }
