@@ -463,60 +463,68 @@ section{
 .quickview .box-container{
    display: flex;
    flex-wrap: wrap;
+   justify-content: center;
+   gap: 2rem;
    margin: auto;
-   width: 50%;
+   max-width: 400px;
 }
 .quickview .box-container .box{
+   margin-top: 100px;
    display: flex;
-   border-radius: 2rem;
+   flex-direction: column;
+   border-radius: 1rem;
    background-color: var(--white);
    box-shadow: var(--box-shadow);
    padding:2rem;
    text-align: center;
    border:var(--border);
    position: relative;
+   transition: transform 0.2s, box-shadow 0.2s;
 }
-.quickview .box-container .box .image{
-   margin: auto;
-   position: relative;
-   height: 50rem;
+.quickview .box-container .box:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
-.quickview .box-container .box .name{
-   font-weight: bold;
-   padding:1rem 0;
-   font-size: 3rem;
-   color:var(--black);
+.quickview .box-container .box h3 {
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
 }
-.quickview .box-container .box .qty{
-   width: 50%;
-   padding:1.2rem 1.4rem;
+.quickview .box-container .box img {
+   max-width: 100%;
+   height: auto;
+   margin-bottom: 1rem;
+}
+
+.quickview .box-container .box p {
+   font-size: 2rem;
+   color: #555;
+   margin-bottom: 1rem;
+}
+
+.quickview .box-container .box .qty {
    border-radius: .5rem;
    border:var(--border);
-   margin:1rem 0;
+   width: 100%;
+   padding: 10px;
    font-size: 2rem;
-}
-.quickview  .box-container .box .price{
-   position: absolute;
-   top:1rem; left:1rem;
-   border-radius: .5rem;
-   padding:2rem;
-   font-size: 2.5rem;
-   color:var(--white);
-   background-color: var(--red);
+   margin-right: 0.5rem;
+
 }
 
-.quickview .box .description{
-   right:5rem;
-   margin-left: 0.5rem;
-   font-size: 2.5rem;
-   color:var(--black);
-   background-color: var(--white);
+.quickview .box-container .box .btn {
+   width: 50%;
+   padding: 0.5rem 1rem;
+   background-color: var(--orange);
+   color: #fff;
+   border: var(--border);
+   cursor: pointer;
+   transition: background-color 0.2s;
+   margin: 10px auto;
 }
 
-.quickview .box .box-container .qty-cart{
-   display: flex;
+.quickview .box-container .box .btn:hover {
+   background-color: var(--light-color);
 }
-
 /*About Section Styling*/
 .about .flex{
    max-width: 1200px;
