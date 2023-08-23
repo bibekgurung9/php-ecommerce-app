@@ -58,17 +58,19 @@ if(isset($_GET['id'])){
 <section class="quickview">
    <div class="box-container">
    <form action="" method="post" class="box">   
-      <h3><?php echo $product_name; ?></h3>
-      <img class="image" src="uploaded_img/<?php echo $product_image; ?>" alt="Product Image">
+   <div class="content1">
+   <h3><?php echo $product_name; ?></h3>
+   <img class="image" src="uploaded_img/<?php echo $product_image; ?>" alt="Product Image"> 
+   </div>   
       <div class="content">
       <p><strong>Price:</strong> Rs.<?php echo $product_price; ?>/-</p>
       <p><strong>Description:</strong> <?php echo $product_description; ?></p>
-      </div>
       <input type="number" min="1" name="product_quantity" value="1" class="qty">
       <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
       <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
       <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
       <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+   </div>
    </form>
    </div>
 </section>
