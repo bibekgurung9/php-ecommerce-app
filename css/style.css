@@ -144,7 +144,7 @@ section{
    align-items: center;
    justify-content: center;
    gap:1rem;
-   background: url(https://www.iamabiker.com/wp-content/uploads/2020/11/Royal-Enfield-Meteor-350-HD-wallpapers-6.jpg) no-repeat;
+   background: url(https://wallpapercave.com/wp/wp6624637.jpg) no-repeat;
    background-size: cover;
    background-position: center;
    text-align: center;
@@ -153,6 +153,9 @@ section{
    font-size: 5rem;
    color:var(--white);
    text-transform: uppercase;
+   text-shadow: -2px 2px 0 #000,
+				  2px 2px 0 #000,
+				 2px -2px 0 #000;
 }
 .heading p{
    font-size: 2.5rem;
@@ -513,6 +516,7 @@ section{
    padding: 10px;
    font-size: 2rem;
    margin-right: 0.5rem;
+   margin-top: 20px;
 }
 .quickview .box-container .box .btn {
    width: 50%;
@@ -523,6 +527,7 @@ section{
    cursor: pointer;
    transition: 0.5s;
    margin: 10px auto;
+   padding-top: 10px;
 }
 
 .quickview .box-container .box .btn:hover {
