@@ -39,6 +39,13 @@ if(isset($message)){
             <a href="test_ride.php">Test Ride</a>
          </nav>
 
+<section class="search-form">
+   <form action="search_form.php" method="post">
+      <input type="text" name="search" placeholder="Search Something" class="box">
+      <input type="submit" name="submit" value="search" class="btn">
+   </form>
+</section>
+
          <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
 

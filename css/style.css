@@ -332,7 +332,6 @@ section{
 .header .header-2 .flex .icons > *:hover{
    color:var(--orange);
 }
-
 #menu-btn{
    display: none;
 }
@@ -368,6 +367,28 @@ section{
 .header .header-2 .flex .user-box .delete-btn{
    margin-top: 0;
 }
+/*Search bar in Header*/
+.search-form form{
+   max-width: 500px;
+   margin:0 auto;
+   display: flex;
+   gap:1rem;
+}
+
+.search-form form .btn{
+   margin-top: 0;
+}
+
+.search-form form .box{
+   width: 50%;
+   padding:1.2rem 1.4rem;
+   border:var(--border);
+   font-size: 1.5rem;
+   color:var(--black);
+   background-color: var(--light-bg);
+   border-radius: .5rem;
+}
+
 
 /*Home Section Styling*/
 .home{
@@ -1008,29 +1029,7 @@ section{
    color:var(--orange);
 }
 
-.search-form form{
-   max-width: 1200px;
-   margin:0 auto;
-   display: flex;
-   gap:1rem;
-}
-
-.search-form form .btn{
-   margin-top: 0;
-}
-
-.search-form form .box{
-   width: 100%;
-   padding:1.2rem 1.4rem;
-   border:var(--border);
-   font-size: 2rem;
-   color:var(--black);
-   background-color: var(--light-bg);
-   border-radius: .5rem;
-}
-
 /*Footer Section Styling*/
-
 .footer{
    background-color: var(--light-bg);
 }
@@ -1097,7 +1096,6 @@ section{
    html{
       font-size: 55%;
    }
-
 }
 
 @media (max-width:768px){
@@ -1105,7 +1103,6 @@ section{
    #menu-btn{
       display: inline-block;
    }
-
    .header .header-2 .flex .navbar{
       position: absolute;
       top:99%; left:0; right:0;
@@ -1114,35 +1111,26 @@ section{
       border-bottom: var(--border);
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
    }
-
    .header .header-2 .flex .navbar.active{
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
    }
-
    .header .header-2 .flex .navbar a{
       display: block;
       font-size: 2.5rem;
       margin:2rem;
    }
-
    .home .content h3{
       font-size: 3.5rem;
    }
-
 }
-
 @media (max-width:450px){
-
    html{
       font-size: 50%;
    }
-
    .heading h3{
       font-size: 3.5rem;
    }
-
    .title{
       font-size: 3rem;
    }
-
 }
