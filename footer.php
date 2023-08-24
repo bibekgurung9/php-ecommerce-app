@@ -31,6 +31,6 @@
    </div>
 
    <p class="credit"><span>BCA 4th Semester Project</span><br>
-   <span>@ All Rights Reserved To Bibek Gurung</span> </p>
+   <span>@ All Rights Reserved To Bibek Gurung & Jebin Joshi</span> </p>
 
 </section>

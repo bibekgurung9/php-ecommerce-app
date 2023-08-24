@@ -63,7 +63,27 @@ if(isset($message)){
    }
 }
 ?>
-   
+
+<header class="header">
+
+   <div class="header-1">
+      <div class="flex">
+         <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="https://github.com/bibekgurung9" target="_blank" class="fab fa-github"></a>
+            <a href="https://www.linkedin.com/in/bibek-gurung-4aa280274/" target="_blank" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            
+         </div>
+         <p><a href="login.php">Login </a> | <a href="register.php">Register</a> </p>
+      </div>
+   </div>
+</header>
+
+<div class="welcome">
+<h3>Welcome to BIKESHOP</h3>
+<p>Login Into Your Account: </p>
+</div>
 <div class="form-container">
 
    <form action="" method="post">
@@ -73,8 +93,30 @@ if(isset($message)){
       <input type="submit" name="submit" value="login now" class="btn">
       <p>Don't have an account? <a href="register.php">Register Now!</a></p>
    </form>
-
 </div>
 
+<section class="footer">
+   <div class="box-container">
+      <div class="box">
+         <h3>extra links</h3>
+         <a href="login.php">LOGIN</a>
+         <a href="register.php">REGISTER</a>
+         <a href="https://github.com/bibekgurung9" target="_blank">GITHUB</a>
+         <a href="https://www.linkedin.com/in/bibek-gurung-4aa280274/" target="_blank">LINKEDIN</a>
+      </div>
+
+      <div class="box">
+         <h3>contact info</h3>
+         <p> <i class="fas fa-phone"></i> +977-98XXXXXXXX</p>
+         <p> <i class="fas fa-phone"></i> +144-XXXXXX </p>
+         <p> <i class="fas fa-envelope"></i> bibekgurung@email.com </p>
+         <p> <i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
+      </div>
+   </div>
+
+   <p class="credit"><span>BCA 4th Semester Project</span><br>
+   <span>@ All Rights Reserved To Bibek Gurung & Jebin Joshi</span> </p>
+
+</section>
 </body>
 </html>

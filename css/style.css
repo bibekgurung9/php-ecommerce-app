@@ -36,7 +36,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-   background-color: var(--orange);
+   background-color: var(--black);
 }
 
 html{
@@ -177,14 +177,13 @@ section{
 }
 /*Form Styling*/
 .form-container{
-   min-height: 100vh;
+   min-height: 70vh;
    background-color: var(--light-bg);
    display: flex;
    align-items: center;
    justify-content: center;
    padding:2rem;
 }
-
 .form-container form{
    padding:2rem;
    width: 50rem;
@@ -237,7 +236,17 @@ section{
    color: #f39c12;
 
 }
-
+/*Welcome Section In Register & Login Form*/
+.welcome{
+   text-align: center;
+   font-size: 2.5rem;
+   background-color: var(--light-bg);
+}
+.welcome h3,
+.welcome p{
+   display: block;
+   margin: auto 0;
+}
 /*Header Section Styling*/
 .header .header-1{
    background-color: var(--light-bg);
@@ -1066,12 +1075,15 @@ section{
 }
 
 .footer .credit span{
-   color:var(--orange);
+   color:var(--black);
 }
 
+.footer .credit span:hover{
+   color:var(--orange);
+   cursor: default;
+}
 
-/* media queries  */
-
+/* Media Queries  */
 @media (max-width:991px){
 
    html{
