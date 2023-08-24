@@ -683,6 +683,10 @@ section{
    text-align: center;
    padding:2rem;
 }
+.features .box-container .box:hover{
+  box-shadow: 1px 0 50px var(--orange);
+  transition: 0.5s ;
+}
 
 .features .box-container .box img{
    height: 10rem;
@@ -1064,7 +1068,11 @@ section{
    color:var(--orange);
    text-decoration: underline;
 }
-
+.footer .box-container .box iframe{
+   width: 400px;
+   height: 200px;
+   box-shadow: var(--box-shadow);
+}
 .footer .credit{
    text-align: center;
    font-size: 2rem;
