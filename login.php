@@ -6,7 +6,7 @@ session_start();
 if(isset($_POST['submit'])){
 
    $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $enteredPassword = $_POST['password']; // Get the plain entered password
+   $enteredPassword = $_POST['password']; // Getting the plain entered password
 
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
 
