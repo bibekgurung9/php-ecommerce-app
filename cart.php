@@ -100,13 +100,6 @@ if(isset($_GET['delete_all'])){
 
 </section>
 
-
-
-
-
-
-
-
 <?php include 'footer.php'; ?>
 
 <!-- custom js file link  -->

@@ -56,28 +56,40 @@ if(!isset($user_id)){
          <p> Your Orders : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
          <p> Total Price : <span>Rs. <?php echo $fetch_orders['total_price']; ?>/-</span> </p>
          <p> Payment Status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
-         </div>
+         
+         <!--Delete Order Button-->
+      <div style="margin-top: 2rem; text-align:center;">
+      <a href="order.php?delete_order=<?php echo $fetch_orders['order_id'];?>" class="delete-btn" onclick="return confirm('Some fees may be charged. Do you want to delete this order?');">Delete This Order!</a>
+      <?php 
+      if(isset($_GET['delete_order'])){
+         $order_id = $_GET['delete_order'];
+
+         $delete_query = mysqli_query($conn, "DELETE FROM `orders` WHERE id = '$order_id'");
+         
+         if($delete_query){
+            //redirecting to the orders page after successul deletion
+            header('location: orders.php');
+         } else{
+            $message[] = 'Your order has been deleted!' ;
+         }
+      }
+      ?>
+      </div>
+
+      </div>
       <?php
        }
       }else{
          echo '<p class="empty">No Orders Has Been Placed Yet!<br> Place A Order Now <a href="shop.php">Shop Now!</a></p>';
       }
       ?>
+         
    </div>
-
 </section>
-
-
-
-
-
-
-
 
 <?php include 'footer.php'; ?>
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
-
 </body>
 </html>
