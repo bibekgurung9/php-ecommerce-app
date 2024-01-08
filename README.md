@@ -2,10 +2,6 @@
 
 BikeShop is a full-stack e-commerce website project built with HTML, CSS, JavaScript, PHP, and MySQL. It provides a platform for users to browse, purchase, and manage bicycles online.
 
-- Type some Markdown on the left
-- See HTML in the right
-- ✨Magic ✨
-
 ## Features
 
 - Responsive and intuitive user interface for seamless navigation.
